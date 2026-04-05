@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
 import { useLanguage } from "@/context/LanguageContext";
@@ -35,41 +36,52 @@ export default function Navbar() {
         className="fixed top-0 left-0 right-0 z-50 transition-colors duration-300"
         style={{ backgroundColor: scrolled ? "#1B3A2D" : "transparent" }}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16 md:h-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-forest flex items-center justify-center border-2 border-gold">
-              <span className="text-gold font-garamond font-bold text-lg">GM</span>
+          <Link href="/" className="flex items-center gap-4">
+            <div className="relative w-14 h-14 md:w-16 md:h-16">
+              <Image
+                src="/logo.png"
+                alt="GM Marriage Caterers"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
-            <span className="hidden sm:block text-ivory font-garamond text-lg font-semibold">
+            <span className="hidden sm:block text-ivory font-garamond text-xl md:text-2xl font-bold">
               GM Marriage Caterers
             </span>
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 href={link.path}
-                className={`text-sm font-lato transition-colors ${
-                  pathname === link.path
-                    ? "text-gold font-bold"
-                    : "text-ivory/80 hover:text-gold"
-                }`}
+                className="relative group"
               >
-                {t(link.key)}
+                <span className={`text-base font-lato font-semibold transition-colors ${
+                  pathname === link.path
+                    ? "text-gold"
+                    : "text-ivory hover:text-gold"
+                }`}>
+                  {t(link.key)}
+                </span>
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gold transition-all duration-300 ${
+                  pathname === link.path ? "w-full" : "w-0 group-hover:w-full"
+                }`} />
               </Link>
             ))}
             <Link
               href="/booknow"
-              className="px-5 py-2 bg-gold text-forest font-lato font-bold text-sm rounded-full hover:bg-gold-light transition-colors"
+              className="px-6 py-2.5 bg-gold text-forest font-lato font-bold text-base rounded-full hover:bg-gold-light hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               {t("nav.book")}
             </Link>
             <button
               onClick={() => setLang(lang === "en" ? "ta" : "en")}
-              className="px-3 py-1.5 border border-ivory/30 rounded-full text-ivory text-xs font-lato hover:border-gold hover:text-gold transition-colors"
+              className="px-4 py-2 border-2 border-ivory/30 rounded-full text-ivory text-sm font-lato font-semibold hover:border-gold hover:text-gold transition-colors"
             >
               {lang === "en" ? "தமிழ்" : "EN"}
             </button>

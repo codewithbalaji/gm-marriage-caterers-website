@@ -11,15 +11,11 @@ export default function About() {
 
   return (
     <>
-      <section className="relative h-64 md:h-80 flex items-center justify-center">
-        <Image src="/gallery-1.jpg" alt="About" fill className="object-cover" />
-        <div className="absolute inset-0 bg-forest/70" />
-        <div className="relative z-10 text-center">
-          <h1 className={`text-4xl md:text-5xl font-bold text-ivory ${lang === "ta" ? "font-tamil" : "font-garamond"}`}>
-            {t("about.heading")}
-          </h1>
-          <p className="text-gold mt-2 font-lato">{t("about.sub")}</p>
-        </div>
+      <section className="pt-24 pb-8 bg-forest text-center">
+        <h1 className={`text-4xl md:text-5xl font-bold text-ivory ${lang === "ta" ? "font-tamil" : "font-garamond"}`}>
+          {t("about.heading")}
+        </h1>
+        <p className="text-gold mt-2 font-lato">{t("about.sub")}</p>
       </section>
 
       <section className="section-padding bg-ivory">

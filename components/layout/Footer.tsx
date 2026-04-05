@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
@@ -12,13 +13,18 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full bg-forest flex items-center justify-center border-2 border-gold">
-                <span className="text-gold font-garamond font-bold text-xl">GM</span>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="relative w-16 h-16">
+                <Image
+                  src="/logo.png"
+                  alt="GM Marriage Caterers"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <div>
-                <h3 className="font-garamond text-xl font-bold text-gold">GM Marriage Caterers</h3>
-                <p className={`text-xs text-ivory/60 ${lang === "ta" ? "font-tamil" : ""}`}>
+                <h3 className="font-garamond text-2xl font-bold text-gold">GM Marriage Caterers</h3>
+                <p className={`text-sm text-ivory/60 ${lang === "ta" ? "font-tamil" : ""}`}>
                   கணேசன் ஜி.எம். மேரேஜ் கேட்டரர்ஸ்
                 </p>
               </div>

@@ -173,7 +173,7 @@ const translations: Record<Lang, any> = {
       },
     },
     footer: {
-      tagline: "Authentic South Indian Brahmin Wedding Catering Since 2000",
+      tagline: "Serving authentic South Indian Brahmin wedding feasts since 2000. With 25+ years of experience and 10,000+ functions across Tamil Nadu, we bring traditional flavors and impeccable service to every celebration.",
       quickLinks: "Quick Links",
       contact: "Contact Us",
       copyright: "© 2025 GM Marriage Caterers. All rights reserved.",
@@ -314,7 +314,7 @@ const translations: Record<Lang, any> = {
       },
     },
     footer: {
-      tagline: "2000 முதல் உண்மையான தென்னிந்திய பிராமண திருமண உணவு சேவை",
+      tagline: "2000 முதல் உண்மையான தென்னிந்திய பிராமண திருமண விருந்துகளை வழங்குகிறோம். 25+ ஆண்டுகள் அனுபவமும், தமிழ்நாடு முழுவதும் 10,000+ விழாக்களும் கொண்ட நாங்கள், ஒவ்வொரு கொண்டாட்டத்திற்கும் பாரம்பரிய சுவைகளையும் சிறந்த சேவையையும் கொண்டு வருகிறோம்.",
       quickLinks: "விரைவு இணைப்புகள்",
       contact: "தொடர்பு",
       copyright: "© 2025 ஜி.எம். மேரேஜ் கேட்டரர்ஸ். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",

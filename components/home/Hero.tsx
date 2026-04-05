@@ -20,7 +20,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <motion.p
-          className="text-gold font-garamond italic text-lg md:text-xl mb-6 font-tamil"
+          className="text-gold font-garamond italic text-lg md:text-xl mb-6 font-tamil font-bold drop-shadow-lg"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -38,7 +38,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="text-gold text-lg md:text-xl font-lato mb-10"
+          className="text-gold text-lg md:text-xl font-lato font-bold mb-10 drop-shadow-lg"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}

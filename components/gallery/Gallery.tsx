@@ -58,7 +58,7 @@ export default function Gallery() {
               <motion.div
                 key={`${img.src}-${i}`}
                 layout
-                className="break-inside-avoid rounded-lg overflow-hidden cursor-pointer group"
+                className="relative break-inside-avoid rounded-lg overflow-hidden cursor-pointer group"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: i * 0.05 }}
