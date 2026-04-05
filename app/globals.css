@@ -53,6 +53,11 @@
   border-color: hsl(42 40% 82%);
 }
 
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
   background-color: #FDFAF2;
   color: hsl(0 0% 10%);
