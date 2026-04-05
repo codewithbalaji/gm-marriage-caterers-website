@@ -134,6 +134,16 @@ export default function Navbar() {
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
             >
+              {/* Close button */}
+              <button
+                onClick={() => setMobileOpen(false)}
+                className="absolute top-6 right-6 text-ivory/80 hover:text-gold transition-colors"
+                aria-label="Close menu"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M6 6L18 18M6 18L18 6" />
+                </svg>
+              </button>
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.path}
