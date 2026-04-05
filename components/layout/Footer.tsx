@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
@@ -42,7 +44,7 @@ export default function Footer() {
               ].map((link) => (
                 <Link
                   key={link.path}
-                  to={link.path}
+                  href={link.path}
                   className={`block text-ivory/70 hover:text-gold transition-colors text-sm ${lang === "ta" ? "font-tamil" : "font-lato"}`}
                 >
                   {t(link.key)}

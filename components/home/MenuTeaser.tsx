@@ -1,21 +1,18 @@
+"use client";
+
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import SectionHeading from "@/components/ui/SectionHeading";
-import foodPayasam from "@/assets/food-payasam.jpg";
-import foodSambar from "@/assets/food-sambar.jpg";
-import foodThali from "@/assets/food-thali.jpg";
-import foodKosamalli from "@/assets/food-kosamalli.jpg";
-import foodAppalam from "@/assets/food-appalam.jpg";
-import foodKalkandu from "@/assets/food-kalkandu.jpg";
 
 const foods = [
-  { img: foodPayasam, ta: "பால் பாயசம்", en: "Paal Payasam", tag: "Sweet" },
-  { img: foodKalkandu, ta: "கல்கண்டு சாதம்", en: "Kalkandu Sadham", tag: "Breakfast" },
-  { img: foodKosamalli, ta: "கோசமல்லி", en: "Kosamalli", tag: "Salad" },
-  { img: foodSambar, ta: "சாம்பார்", en: "Sambar", tag: "Main" },
-  { img: foodAppalam, ta: "அப்பளம் & வடை", en: "Appalam & Vadai", tag: "Side" },
-  { img: foodThali, ta: "வாழை இலை விருந்து", en: "Banana Leaf Feast", tag: "Full Meal" },
+  { img: "/food-payasam.jpg", ta: "பால் பாயசம்", en: "Paal Payasam", tag: "Sweet" },
+  { img: "/food-kalkandu.jpg", ta: "கல்கண்டு சாதம்", en: "Kalkandu Sadham", tag: "Breakfast" },
+  { img: "/food-kosamalli.jpg", ta: "கோசமல்லி", en: "Kosamalli", tag: "Salad" },
+  { img: "/food-sambar.jpg", ta: "சாம்பார்", en: "Sambar", tag: "Main" },
+  { img: "/food-appalam.jpg", ta: "அப்பளம் & வடை", en: "Appalam & Vadai", tag: "Side" },
+  { img: "/food-thali.jpg", ta: "வாழை இலை விருந்து", en: "Banana Leaf Feast", tag: "Full Meal" },
 ];
 
 export default function MenuTeaser() {
@@ -35,16 +32,13 @@ export default function MenuTeaser() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.4 }}
             >
-              <div className="overflow-hidden h-48">
-                <motion.img
+              <div className="overflow-hidden h-48 relative">
+                <Image
                   src={food.img}
                   alt={food.en}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  width={640}
-                  height={640}
-                  whileHover={{ scale: 1.06 }}
-                  transition={{ duration: 0.3 }}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
               <div className="p-4">
@@ -59,7 +53,7 @@ export default function MenuTeaser() {
         </div>
         <div className="text-center mt-10">
           <Link
-            to="/menu"
+            href="/menu"
             className={`inline-block px-8 py-3 bg-gold text-forest font-bold rounded-full hover:bg-gold-light transition-colors ${lang === "ta" ? "font-tamil" : "font-lato"}`}
           >
             {t("menuTeaser.viewFull")}

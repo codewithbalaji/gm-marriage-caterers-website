@@ -1,5 +1,7 @@
+"use client";
+
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function CTABanner() {
@@ -26,7 +28,7 @@ export default function CTABanner() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <Link
-            to="/book"
+            href="/booknow"
             className={`px-8 py-3.5 bg-gold text-forest font-bold rounded-full hover:bg-gold-light transition-colors text-lg ${lang === "ta" ? "font-tamil" : "font-lato"}`}
           >
             {t("cta.book")}

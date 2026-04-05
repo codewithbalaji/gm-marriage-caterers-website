@@ -1,3 +1,5 @@
+"use client";
+
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
 type Lang = "en" | "ta";
@@ -11,14 +13,21 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>(() => {
+  const [lang, setLangState] = useState<Lang>("en");
+
+  useEffect(() => {
+    // Only access localStorage on the client side
     const saved = localStorage.getItem("gm-lang");
-    return (saved === "ta" ? "ta" : "en") as Lang;
-  });
+    if (saved === "ta" || saved === "en") {
+      setLangState(saved);
+    }
+  }, []);
 
   const setLang = (l: Lang) => {
     setLangState(l);
-    localStorage.setItem("gm-lang", l);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("gm-lang", l);
+    }
   };
 
   const t = (key: string): string => {

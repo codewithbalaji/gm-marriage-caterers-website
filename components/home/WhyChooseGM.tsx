@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "motion/react";
 import { useLanguage } from "@/context/LanguageContext";
 import { AuthenticTasteIcon, RitualPrecisionIcon, FullServiceIcon } from "@/components/icons/WhyUsIcons";
@@ -43,7 +45,7 @@ export default function WhyChooseGM() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15, duration: 0.5 }}
               >
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <p.icon size={56} />
                 </div>
                 <div>

@@ -1,7 +1,9 @@
+"use client";
+
 import { motion } from "motion/react";
 import { useLanguage } from "@/context/LanguageContext";
-import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-feast.jpg";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   const { t, lang } = useLanguage();
@@ -10,7 +12,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={heroImage} alt="Traditional South Indian banana leaf feast" className="w-full h-full object-cover" width={1920} height={1080} />
+        <Image src="/hero-feast.jpg" alt="Traditional South Indian banana leaf feast" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-forest/55" />
         <div className="absolute inset-0 kolam-pattern" />
       </div>
@@ -51,13 +53,13 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.9 }}
         >
           <Link
-            to="/menu"
+            href="/menu"
             className={`px-8 py-3.5 bg-gold text-forest font-bold rounded-full hover:bg-gold-light transition-colors text-lg ${lang === "ta" ? "font-tamil" : "font-lato"}`}
           >
             {t("hero.cta1")}
           </Link>
           <Link
-            to="/book"
+            href="/booknow"
             className={`px-8 py-3.5 border-2 border-ivory text-ivory font-bold rounded-full hover:bg-ivory/10 transition-colors text-lg ${lang === "ta" ? "font-tamil" : "font-lato"}`}
           >
             {t("hero.cta2")}

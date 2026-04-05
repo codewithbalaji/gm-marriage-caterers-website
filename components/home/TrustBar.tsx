@@ -1,8 +1,9 @@
-import { useRef } from "react";
+"use client";
+
+import { useRef, useEffect } from "react";
 import { motion, useInView, animate, useMotionValue, useTransform } from "motion/react";
 import { useLanguage } from "@/context/LanguageContext";
 import { CalendarStarIcon, ServingDomeIcon, LocationPinIcon, HeartStarIcon } from "@/components/icons/StatIcons";
-import { useEffect } from "react";
 
 function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);

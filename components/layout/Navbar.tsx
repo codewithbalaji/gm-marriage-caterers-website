@@ -1,5 +1,8 @@
+"use client";
+
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -13,7 +16,7 @@ const navLinks = [
 
 export default function Navbar() {
   const { t, lang, setLang } = useLanguage();
-  const location = useLocation();
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { scrollY } = useScroll();
@@ -24,7 +27,7 @@ export default function Navbar() {
 
   useEffect(() => {
     setMobileOpen(false);
-  }, [location.pathname]);
+  }, [pathname]);
 
   return (
     <>
@@ -34,7 +37,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-forest flex items-center justify-center border-2 border-gold">
               <span className="text-gold font-garamond font-bold text-lg">GM</span>
             </div>
@@ -48,9 +51,9 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <Link
                 key={link.path}
-                to={link.path}
+                href={link.path}
                 className={`text-sm font-lato transition-colors ${
-                  location.pathname === link.path
+                  pathname === link.path
                     ? "text-gold font-bold"
                     : "text-ivory/80 hover:text-gold"
                 }`}
@@ -59,7 +62,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              to="/book"
+              href="/booknow"
               className="px-5 py-2 bg-gold text-forest font-lato font-bold text-sm rounded-full hover:bg-gold-light transition-colors"
             >
               {t("nav.book")}
@@ -127,9 +130,9 @@ export default function Navbar() {
                   transition={{ delay: i * 0.05 }}
                 >
                   <Link
-                    to={link.path}
+                    href={link.path}
                     className={`block py-3 text-lg font-lato ${
-                      location.pathname === link.path ? "text-gold font-bold" : "text-ivory/80"
+                      pathname === link.path ? "text-gold font-bold" : "text-ivory/80"
                     }`}
                   >
                     {t(link.key)}
@@ -142,7 +145,7 @@ export default function Navbar() {
                 transition={{ delay: 0.3 }}
               >
                 <Link
-                  to="/book"
+                  href="/booknow"
                   className="mt-4 block text-center px-5 py-3 bg-gold text-forest font-bold rounded-full"
                 >
                   {t("nav.book")}
