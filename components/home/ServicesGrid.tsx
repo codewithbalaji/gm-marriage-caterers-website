@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { useLanguage } from "@/context/LanguageContext";
 import SectionHeading from "@/components/ui/SectionHeading";
+import Image from "next/image";
 import {
   MarriageIcon, BetrothalIcon, SeemanthamIcon, UpanayanamIcon,
   AyushyaIcon, GrihapravesamIcon, SashtiabdhaIcon, SadabhishekamIcon,
@@ -41,7 +42,15 @@ export default function ServicesGrid() {
               whileHover={{ scale: 1.04 }}
             >
               <div className="flex justify-center mb-4">
-                <svc.icon size={48} className="group-hover:scale-110 transition-transform" />
+                <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-gold-light/30 group-hover:border-gold transition-colors">
+                  <Image 
+                    src={`/images/services/service_${svc.key}.png`} 
+                    alt={t(`services.${svc.key}.name`) || "Service"}
+                    width={200} 
+                    height={200} 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                  />
+                </div>
               </div>
               <h3 className={`text-forest font-bold text-lg mb-1 ${lang === "ta" ? "font-tamil" : "font-garamond"}`}>
                 {t(`services.${svc.key}.name`)}

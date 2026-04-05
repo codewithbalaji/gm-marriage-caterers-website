@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { useLanguage } from "@/context/LanguageContext";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Link from "next/link";
+import Image from "next/image";
 import {
   MarriageIcon, BetrothalIcon, SeemanthamIcon, UpanayanamIcon,
   AyushyaIcon, GrihapravesamIcon, SashtiabdhaIcon, SadabhishekamIcon,
@@ -56,54 +57,74 @@ export default function Services() {
       </section>
 
       <section className="section-padding bg-ivory">
-        <div className="max-w-5xl mx-auto space-y-6">
-          {services.map((svc, i) => (
-            <motion.div
-              key={svc.key}
-              className={`flex flex-col md:flex-row items-center gap-6 bg-card rounded-xl p-6 border border-gold-light/30 ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex-shrink-0 w-20 h-20 flex items-center justify-center bg-gold-pale rounded-full">
-                <svc.icon size={48} />
-              </div>
-              <div className="flex-1 text-center md:text-left">
-                <h3 className={`text-forest font-bold text-2xl mb-2 ${lang === "ta" ? "font-tamil" : "font-garamond"}`}>
-                  {t(`services.${svc.key}.name`)}
-                </h3>
-                <p className={`text-forest-light/70 ${lang === "ta" ? "font-tamil" : "font-lato"}`}>
-                  {t(`services.${svc.key}.desc`)}
-                </p>
-              </div>
-              <Link
-                href={`/booknow?event=${svc.key}`}
-                className="px-5 py-2 bg-forest text-ivory text-sm font-bold rounded-full hover:bg-forest-light transition-colors font-lato shrink-0"
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10">
+            {services.map((svc, i) => (
+              <motion.div
+                key={svc.key}
+                className="group flex flex-col bg-card rounded-2xl p-8 border border-gold-light/30 hover:border-gold hover:shadow-xl transition-all duration-300 relative overflow-hidden"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
               >
-                Enquire
-              </Link>
-            </motion.div>
-          ))}
+                {/* Subtle decorative background accent */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gold-pale rounded-bl-full opacity-50 -z-10 transition-transform group-hover:scale-110"></div>
+                
+                <div className="flex justify-center mb-6 relative z-10">
+                  <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white group-hover:border-gold transition-colors shadow-lg">
+                    <Image 
+                      src={`/images/services/service_${svc.key}.png`} 
+                      alt={t(`services.${svc.key}.name`) || "Service"}
+                      width={300} 
+                      height={300} 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                    />
+                  </div>
+                </div>
+                <div className="flex-1 text-center flex flex-col z-10">
+                  <h3 className={`text-forest font-bold text-2xl mb-3 ${lang === "ta" ? "font-tamil" : "font-garamond"}`}>
+                    {t(`services.${svc.key}.name`)}
+                  </h3>
+                  <p className={`text-forest-light/80 mb-8 flex-1 leading-relaxed ${lang === "ta" ? "font-tamil" : "font-lato"}`}>
+                    {t(`services.${svc.key}.desc`)}
+                  </p>
+                  <div>
+                    <Link
+                      href={`/booknow?event=${svc.key}`}
+                      className="inline-block px-8 py-3 bg-forest text-ivory text-sm font-bold rounded-full hover:bg-gold hover:text-forest transition-colors shadow-md hover:shadow-lg font-lato"
+                    >
+                      Enquire Now
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="section-padding bg-cream">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto px-4 md:px-8">
           <SectionHeading tKey="complements.heading" />
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-8">
             {complements.map((c, i) => (
               <motion.div
                 key={c.key}
-                className="bg-card rounded-lg p-4 text-center border border-gold-light/30 hover:border-gold transition-colors"
-                initial={{ opacity: 0, scale: 0.9 }}
+                className="group relative bg-white rounded-xl p-6 flex flex-col items-center justify-center text-center border border-gold-light/40 hover:border-gold hover:bg-gold-pale/10 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.04 }}
+                transition={{ delay: i * 0.04, duration: 0.4 }}
               >
-                <c.icon size={36} className="mx-auto mb-2" />
-                <p className={`text-forest text-xs font-semibold ${lang === "ta" ? "font-tamil" : "font-lato"}`}>
+                {/* Minimalist decorative element instead of an image/icon */}
+                <div className="w-8 h-[1px] bg-gold mb-4 group-hover:w-16 transition-all duration-500"></div>
+                
+                <p className={`text-forest font-bold text-lg md:text-xl group-hover:text-forest transition-colors tracking-wide ${lang === "ta" ? "font-tamil leading-relaxed" : "font-garamond"}`}>
                   {t(`complements.${c.key}`)}
                 </p>
+                
+                <div className="w-8 h-[1px] bg-gold mt-4 group-hover:w-16 transition-all duration-500"></div>
               </motion.div>
             ))}
           </div>
