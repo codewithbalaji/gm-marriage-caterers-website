@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 export default function WhatsAppButton() {
   return (
     <motion.a
-      href="https://wa.me/919282117620?text=Hello%20GM%20Marriage%20Caterers%2C%20I%20would%20like%20to%20enquire%20about%20catering%20for%20my%20event."
+      href="https://wa.me/919677067620?text=Hello%20GM%20Marriage%20Caterers%2C%20I%20would%20like%20to%20enquire%20about%20catering%20for%20my%20event."
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-whatsapp flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"

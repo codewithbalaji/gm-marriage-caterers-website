@@ -164,6 +164,14 @@ const translations: Record<Lang, any> = {
         submit: "Send Enquiry",
         success: "Thank you! We'll get back to you within 24 hours.",
         selectEvent: "Select event type",
+        placeholders: {
+          name: "Enter your full name",
+          mobile: "+91",
+          email: "your.email@example.com",
+          venue: "Enter venue or city name",
+          guests: "e.g., 100",
+          message: "Tell us about your requirements, preferences, or any special requests...",
+        },
       },
       contact: {
         heading: "Contact Us",
@@ -305,6 +313,14 @@ const translations: Record<Lang, any> = {
         submit: "விண்ணப்பிக்கவும்",
         success: "நன்றி! 24 மணி நேரத்திற்குள் தொடர்பு கொள்வோம்.",
         selectEvent: "நிகழ்வு வகையைத் தேர்ந்தெடுக்கவும்",
+        placeholders: {
+          name: "உங்கள் முழு பெயரை உள்ளிடவும்",
+          mobile: "+91",
+          email: "your.email@example.com",
+          venue: "இடம் அல்லது நகரத்தின் பெயரை உள்ளிடவும்",
+          guests: "எ.கா., 100",
+          message: "உங்கள் தேவைகள், விருப்பத்தேர்வுகள் அல்லது சிறப்பு கோரிக்கைகளைப் பற்றி எங்களிடம் கூறுங்கள்...",
+        },
       },
       contact: {
         heading: "தொடர்பு கொள்ளுங்கள்",

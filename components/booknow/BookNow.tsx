@@ -55,15 +55,15 @@ export default function BookNow() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className={labelClass}>{t("bookPage.form.name")} *</label>
-                  <input type="text" required className={inputClass} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
+                  <input type="text" required className={inputClass} placeholder={t("bookPage.form.placeholders.name")} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
                 </div>
                 <div>
                   <label className={labelClass}>{t("bookPage.form.mobile")} *</label>
-                  <input type="tel" required className={inputClass} placeholder="+91" value={form.mobile} onChange={(e) => setForm({ ...form, mobile: e.target.value })} />
+                  <input type="tel" required className={inputClass} placeholder={t("bookPage.form.placeholders.mobile")} value={form.mobile} onChange={(e) => setForm({ ...form, mobile: e.target.value })} />
                 </div>
                 <div>
                   <label className={labelClass}>{t("bookPage.form.email")}</label>
-                  <input type="email" className={inputClass} value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
+                  <input type="email" className={inputClass} placeholder={t("bookPage.form.placeholders.email")} value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
                 </div>
                 <div>
                   <label className={labelClass}>{t("bookPage.form.eventType")} *</label>
@@ -81,16 +81,16 @@ export default function BookNow() {
                   </div>
                   <div>
                     <label className={labelClass}>{t("bookPage.form.guests")} *</label>
-                    <input type="number" required min="10" className={inputClass} value={form.guests} onChange={(e) => setForm({ ...form, guests: e.target.value })} />
+                    <input type="number" required min="10" className={inputClass} placeholder={t("bookPage.form.placeholders.guests")} value={form.guests} onChange={(e) => setForm({ ...form, guests: e.target.value })} />
                   </div>
                 </div>
                 <div>
                   <label className={labelClass}>{t("bookPage.form.venue")} *</label>
-                  <input type="text" required className={inputClass} value={form.venue} onChange={(e) => setForm({ ...form, venue: e.target.value })} />
+                  <input type="text" required className={inputClass} placeholder={t("bookPage.form.placeholders.venue")} value={form.venue} onChange={(e) => setForm({ ...form, venue: e.target.value })} />
                 </div>
                 <div>
                   <label className={labelClass}>{t("bookPage.form.message")}</label>
-                  <textarea rows={3} className={inputClass} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+                  <textarea rows={3} className={inputClass} placeholder={t("bookPage.form.placeholders.message")} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
                 </div>
                 <button
                   type="submit"
@@ -119,6 +119,8 @@ export default function BookNow() {
                   📞 <a href="tel:+919282117620" className="text-forest hover:text-gold">9282117620</a>
                   {" / "}
                   <a href="tel:+919677067620" className="text-forest hover:text-gold">9677067620</a>
+                  {" / "}
+                  <a href="tel:+919677037620" className="text-forest hover:text-gold">9677037620</a>
                 </p>
                 <p>✉️ <a href="mailto:ganesan@gmmarriagecaterers.com" className="text-forest hover:text-gold">ganesan@gmmarriagecaterers.com</a></p>
                 <p>🕐 {t("bookPage.contact.hours")}</p>

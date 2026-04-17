@@ -70,6 +70,8 @@ export default function Footer() {
                 <a href="tel:+919282117620" className="hover:text-gold transition-colors">9282117620</a>
                 {" / "}
                 <a href="tel:+919677067620" className="hover:text-gold transition-colors">9677067620</a>
+                {" / "}
+                <a href="tel:+919677037620" className="hover:text-gold transition-colors">9677037620</a>
               </p>
               <p>
                 <a href="mailto:ganesan@gmmarriagecaterers.com" className="hover:text-gold transition-colors">
