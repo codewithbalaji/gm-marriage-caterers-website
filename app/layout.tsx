@@ -6,13 +6,24 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import JsonLd from "@/components/seo/JsonLd";
+import { WEB_URL } from "@/lib/siteConfig";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": ["Organization", "FoodEstablishment"],
   name: "GM Marriage Caterers",
-  url: "https://gmmarriagecaterers.com",
-  logo: "https://gmmarriagecaterers.com/logo.png",
+  url: WEB_URL,
+  logo: `${WEB_URL}/logo.png`,
   description:
     "25+ years of authentic South Indian Brahmin wedding catering across Tamil Nadu. Traditional banana leaf feast, ritual precision, and full-service catering.",
   address: {
@@ -35,18 +46,8 @@ const organizationSchema = {
   sameAs: [],
 };
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gmmarriagecaterers.com"),
+  metadataBase: new URL(WEB_URL),
   title: {
     default: "GM Marriage Caterers - South Indian Brahmin Wedding Catering",
     template: "%s | GM Marriage Caterers",
@@ -93,7 +94,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   alternates: {
-    canonical: "https://gmmarriagecaterers.com",
+    canonical: WEB_URL,
   },
 };
 
