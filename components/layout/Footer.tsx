@@ -46,7 +46,7 @@ export default function Footer() {
                 { path: "/services", key: "nav.services" },
                 { path: "/menu", key: "nav.menu" },
                 { path: "/gallery", key: "nav.gallery" },
-                { path: "/book", key: "nav.book" },
+                { path: "/booknow", key: "nav.book" },
               ].map((link) => (
                 <Link
                   key={link.path}

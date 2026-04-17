@@ -33,7 +33,7 @@ export default function GalleryTeaser() {
               transition={{ delay: i * 0.08, duration: 0.4 }}
             >
               <div className="relative w-full h-64">
-                <Image src={img.src} alt={img.cat} fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+                <Image src={img.src} alt={`GM Marriage Caterers - ${img.cat} at South Indian wedding`} fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
               </div>
               <div className="absolute inset-0 bg-forest/0 group-hover:bg-forest/60 transition-colors flex items-center justify-center">
                 <span className="text-gold font-garamond text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity bg-forest/80 px-4 py-1.5 rounded-full">

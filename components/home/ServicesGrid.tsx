@@ -23,6 +23,19 @@ const services = [
   { icon: CorporateIcon, key: "corporate" },
 ];
 
+const serviceAltText: Record<string, string> = {
+  marriage: "Traditional South Indian Brahmin marriage catering with banana leaf feast",
+  betrothal: "Betrothal (Nischayatartham) ceremony catering in Tamil Nadu",
+  seemantham: "Seemantham baby shower catering with traditional South Indian feast",
+  upanayanam: "Upanayanam sacred thread ceremony catering service",
+  ayushya: "Ayushya Homam first birthday traditional catering",
+  grihapravesam: "Grihapravesam housewarming ceremony catering in Tamil Nadu",
+  sashtiabdha: "Sashtiapthapoorthi 60th birthday traditional Brahmin catering",
+  sadabhishekam: "Sadabhishekam 80th birthday auspicious feast catering",
+  punyahavachanam: "Punyahavachanam purification ceremony catering",
+  corporate: "Corporate event South Indian catering service",
+};
+
 export default function ServicesGrid() {
   const { t, lang } = useLanguage();
 
@@ -45,10 +58,10 @@ export default function ServicesGrid() {
                 <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-gold-light/30 group-hover:border-gold transition-colors">
                   <Image 
                     src={`/images/services/service_${svc.key}.png`} 
-                    alt={t(`services.${svc.key}.name`) || "Service"}
-                    width={200} 
-                    height={200} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                    alt={serviceAltText[svc.key] || t(`services.${svc.key}.name`)}
+                    width={200}
+                    height={200}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
               </div>

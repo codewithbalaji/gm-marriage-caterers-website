@@ -201,6 +201,44 @@ const translations: Record<Lang, any> = {
       music: "Music Party",
       mehandi: "Mehandi",
     },
+    faq: {
+      heading: "Frequently Asked Questions",
+      sub: "Everything you need to know about our catering services",
+      items: [
+        {
+          q: "What areas does GM Marriage Caterers serve?",
+          a: "We serve all of Tamil Nadu, including Chennai, Coimbatore, Madurai, Trichy, Salem, and surrounding areas. Our team travels across the state to ensure you experience authentic Brahmin catering wherever your event is held.",
+        },
+        {
+          q: "What types of events do you cater for?",
+          a: "We cater for all auspicious occasions — weddings, betrothal (Nischayatartham), Seemantham, Upanayanam, Grihapravesam, Sashtiapthapoorthi, Sadabhishekam, Ayushya Homam, Punyahavachanam, and corporate events.",
+        },
+        {
+          q: "How many years of experience do you have?",
+          a: "GM Marriage Caterers was founded in 2000 and has 25+ years of experience in authentic South Indian Brahmin wedding catering. We have served 10,000+ functions and over 500 events per year across Tamil Nadu.",
+        },
+        {
+          q: "What is included in a full-service catering package?",
+          a: "Our full-service catering covers menu planning, ingredient sourcing, cooking, banana leaf setup, serving, and cleanup. We handle everything from the kitchen to the dining area so your family can focus on the celebration.",
+        },
+        {
+          q: "Can we customize the menu?",
+          a: "Yes, absolutely. We offer four menu types — Janavaasam, Muhurtham feast, Kattusatham, and fully custom packages. We work with you to include your family's favourite traditional dishes while maintaining ritual appropriateness.",
+        },
+        {
+          q: "How far in advance should we book?",
+          a: "We recommend booking at least 2–3 months in advance for weddings, and 4–6 weeks for smaller events. Peak wedding season (April–June and November–February) fills up quickly — book early to secure your date.",
+        },
+        {
+          q: "What is a banana leaf feast (Virundhu)?",
+          a: "A banana leaf feast, or Virundhu Sappadu, is a traditional South Indian multi-course meal served on a fresh banana leaf. It typically includes rice, sambar, rasam, kootu, poriyal, appalam, pickles, and payasam — all served in the traditional Brahmin style.",
+        },
+        {
+          q: "How can we get a quote or book your services?",
+          a: "You can reach us at 9282117620 or 9677067620, email ganesan@gmmarriagecaterers.com, WhatsApp us, or fill out our online enquiry form. We typically respond within 24 hours.",
+        },
+      ],
+    },
   },
   ta: {
     nav: {
@@ -349,6 +387,44 @@ const translations: Record<Lang, any> = {
       photoVideo: "புகைப்படம் & வீடியோ",
       music: "இசை நிகழ்ச்சி",
       mehandi: "மெஹந்தி",
+    },
+    faq: {
+      heading: "அடிக்கடி கேட்கப்படும் கேள்விகள்",
+      sub: "எங்கள் சேவைகளைப் பற்றி அறிய வேண்டியது அனைத்தும்",
+      items: [
+        {
+          q: "ஜி.எம். கேட்டரர்ஸ் எங்கெல்லாம் சேவை வழங்குகிறது?",
+          a: "சென்னை, கோவை, மதுரை, திருச்சி, சேலம் உள்ளிட்ட தமிழ்நாடு முழுவதும் சேவை வழங்குகிறோம். உங்கள் நிகழ்வு எங்கு நடந்தாலும் நாங்கள் வருகிறோம்.",
+        },
+        {
+          q: "எந்த மாதிரியான நிகழ்வுகளுக்கு சேவை வழங்குகிறீர்கள்?",
+          a: "திருமணம், நிச்சயதார்த்தம், சீமந்தம், உபநயனம், கிரஹப்ரவேசம், சஷ்டியப்தபூர்த்தி, சதாபிஷேகம், ஆயுஷ்ய ஹோமம், புன்யாஹவசனம், மற்றும் கார்ப்பரேட் நிகழ்வுகளுக்கும் சேவை வழங்குகிறோம்.",
+        },
+        {
+          q: "உங்களுக்கு எத்தனை ஆண்டுகள் அனுபவம் உள்ளது?",
+          a: "ஜி.எம். மேரேஜ் கேட்டரர்ஸ் 2000 ஆண்டிலிருந்து சேவையில் உள்ளது. 25+ ஆண்டுகள் அனுபவம், 10,000+ விழாக்கள், ஆண்டுக்கு 500+ நிகழ்வுகள் என்று தமிழ்நாடு முழுவதும் சேவை வழங்கியுள்ளோம்.",
+        },
+        {
+          q: "முழு சேவை தொகுப்பில் என்ன அடங்கும்?",
+          a: "மெனு திட்டமிடல், பொருட்கள் கொள்முதல், சமையல், வாழை இலை அமைப்பு, பரிமாறுதல், சுத்தப்படுத்துதல் வரை அனைத்தையும் நாங்கள் கவனிக்கிறோம். உங்கள் குடும்பம் விழாவை முழுமையாக ஆனந்திக்கலாம்.",
+        },
+        {
+          q: "மெனுவை தனிப்பயனாக்கலாமா?",
+          a: "ஆம், நிச்சயமாக. ஜனவாசம், முகூர்த்தம், கட்டுச்சாதம், மற்றும் தனிப்பயன் தொகுப்புகள் உள்ளன. உங்கள் குடும்பத்தின் விருப்பமான பாரம்பரிய உணவுகளை சடங்குகளுக்கேற்ப சேர்க்கலாம்.",
+        },
+        {
+          q: "எவ்வளவு முன்கூட்டியே முன்பதிவு செய்ய வேண்டும்?",
+          a: "திருமணங்களுக்கு 2–3 மாதங்கள் முன்கூட்டியும், சிறிய நிகழ்வுகளுக்கு 4–6 வாரங்கள் முன்கூட்டியும் முன்பதிவு செய்வது நல்லது. திருமண சீசனில் (ஏப்ரல்–ஜூன், நவம்பர்–பிப்ரவரி) விரைவில் நிரம்பிவிடும்.",
+        },
+        {
+          q: "வாழை இலை விருந்து என்றால் என்ன?",
+          a: "வாழை இலை விருந்து என்பது பாரம்பரிய தென்னிந்திய பல்பாண்ட உணவு. சாதம், சாம்பார், ரசம், கூட்டு, பொரியல், அப்பளம், ஊறுகாய், பாயசம் என அனைத்தும் வாழை இலையில் பரிமாறப்படும்.",
+        },
+        {
+          q: "விலை மதிப்பீடு அல்லது முன்பதிவு எப்படி செய்வது?",
+          a: "9282117620 அல்லது 9677067620 என்ற எண்ணில் அழைக்கலாம், ganesan@gmmarriagecaterers.com க்கு மின்னஞ்சல் அனுப்பலாம், வாட்ஸ்அப்பில் தொடர்புகொள்ளலாம், அல்லது ஆன்லைன் படிவத்தை பூர்த்தி செய்யலாம். 24 மணி நேரத்தில் பதில் அளிப்போம்.",
+        },
+      ],
     },
   },
 };

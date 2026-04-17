@@ -65,7 +65,7 @@ export default function Gallery() {
                 onClick={() => setLightbox(i)}
               >
                 <div className="relative w-full h-64">
-                  <Image src={img.src} alt={img.cat} fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
+                  <Image src={img.src} alt={`GM Marriage Caterers - ${img.cat} at South Indian wedding`} fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
                 </div>
                 <div className="absolute inset-0 bg-forest/0 group-hover:bg-forest/40 transition-colors" />
               </motion.div>
@@ -93,7 +93,7 @@ export default function Gallery() {
             >
               <Image
                 src={filtered[lightbox]?.src}
-                alt=""
+                alt={filtered[lightbox] ? `GM Marriage Caterers - ${filtered[lightbox].cat} at South Indian wedding` : "GM Marriage Caterers event photo"}
                 width={1200}
                 height={800}
                 className="rounded-lg object-contain max-h-[85vh]"

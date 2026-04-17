@@ -29,6 +29,19 @@ const services = [
   { icon: CorporateIcon, key: "corporate" },
 ];
 
+const serviceAltText: Record<string, string> = {
+  marriage: "Traditional South Indian Brahmin marriage catering with banana leaf feast",
+  betrothal: "Betrothal (Nischayatartham) ceremony catering in Tamil Nadu",
+  seemantham: "Seemantham baby shower catering with traditional South Indian feast",
+  upanayanam: "Upanayanam sacred thread ceremony catering service",
+  ayushya: "Ayushya Homam first birthday traditional catering",
+  grihapravesam: "Grihapravesam housewarming ceremony catering in Tamil Nadu",
+  sashtiabdha: "Sashtiapthapoorthi 60th birthday traditional Brahmin catering",
+  sadabhishekam: "Sadabhishekam 80th birthday auspicious feast catering",
+  punyahavachanam: "Punyahavachanam purification ceremony catering",
+  corporate: "Corporate event South Indian catering service",
+};
+
 const complements = [
   { icon: NadaswaramIcon, key: "mangalavadhyam" },
   { icon: FlowersIcon, key: "flowers" },
@@ -73,12 +86,12 @@ export default function Services() {
                 
                 <div className="flex justify-center mb-6 relative z-10">
                   <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white group-hover:border-gold transition-colors shadow-lg">
-                    <Image 
-                      src={`/images/services/service_${svc.key}.png`} 
-                      alt={t(`services.${svc.key}.name`) || "Service"}
-                      width={300} 
-                      height={300} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                    <Image
+                      src={`/images/services/service_${svc.key}.png`}
+                      alt={serviceAltText[svc.key] || t(`services.${svc.key}.name`)}
+                      width={300}
+                      height={300}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   </div>
                 </div>
