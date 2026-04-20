@@ -140,7 +140,7 @@ export default function BookNow() {
             <div className="rounded-xl overflow-hidden border border-gold-light/50 h-64 md:h-80">
               <iframe
                 title="GM Marriage Caterers Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.0!2d80.1548!3d13.1143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDA2JzUxLjUiTiA4MMKwMDknMTcuMyJF!5e0!3m2!1sen!2sin!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.85719692678964!2d80.15265366592944!3d13.11722308535343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52632dd9f403cb%3A0x5622591e4a5f4e15!2sGM%20MARRIAGE%20CATERERS!5e0!3m2!1sen!2sin!4v1776698038909!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
